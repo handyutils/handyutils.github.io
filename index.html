@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HandyUtils — small terminal tools that do one job properly</title>
+<meta name="description" content="HandyUtils is a collection of focused terminal tools: disk-space reclaiming, coding-agent session handoff, MCP server management, Node version upkeep and more." />
+<meta name="theme-color" content="#0b1220" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='5' y='5' width='22' height='22' rx='6' fill='%233b82f6'/%3E%3Cpath d='M11 20l5-9 5 9' stroke='%230b1220' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 32 32" aria-hidden="true" class="brand-mark">
+      <rect x="4" y="4" width="24" height="24" rx="7" fill="url(#hg)"/>
+      <path d="M10.5 21l5.5-10 5.5 10" stroke="#08111f" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#22d3ee"/>
+      </linearGradient></defs>
+    </svg>
+    <span class="brand-name">HandyUtils</span>
+  </a>
+  <nav class="topnav">
+    <a href="#tools">Tools</a>
+    <a href="#install">Install</a>
+    <a class="ghost" href="https://github.com/handyutils" target="_blank" rel="noreferrer">GitHub ↗</a>
+  </nav>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <p class="eyebrow">Terminal tools · Rust &amp; TypeScript · MIT</p>
+    <h1>Small tools that do <span class="grad">one job properly</span></h1>
+    <p class="lede">
+      HandyUtils is a collection of focused command-line utilities. Most are single-binary Rust
+      <abbr title="terminal user interface">TUIs</abbr> with no runtime dependencies — install one with
+      a single command and get on with your day.
+    </p>
+    <div class="badges">
+      <span class="badge blue">single binaries</span>
+      <span class="badge cyan">no runtime deps</span>
+      <span class="badge violet">interactive TUIs</span>
+      <span class="badge emerald">MIT licensed</span>
+    </div>
+  </section>
+
+  <section class="strip">
+    <div class="stat"><span class="stat-num">7</span><span class="stat-label">tools</span></div>
+    <div class="stat"><span class="stat-num">6</span><span class="stat-label">published crates</span></div>
+    <div class="stat"><span class="stat-num">1</span><span class="stat-label">job each</span></div>
+    <div class="stat"><span class="stat-num">0</span><span class="stat-label">runtime deps</span></div>
+  </section>
+
+  <section id="tools" class="section">
+    <h2><span class="accent-rule"></span> The collection</h2>
+
+    <div class="tools">
+
+      <article class="tool t-blue">
+        <header class="tool-head">
+          <h3>dsopt</h3>
+          <span class="tag rust">Rust</span>
+        </header>
+        <p class="tool-desc">Finds <code>node_modules</code> and Rust <code>target/</code> directories,
+          shows what they cost, and reclaims the space — with a confirmation before anything is deleted.</p>
+        <div class="mini-code"><code>cargo install dsopt</code><button class="copy" data-copy="cargo install dsopt">copy</button></div>
+        <footer class="tool-links">
+          <a class="primary" href="https://handyutils.github.io/dsopt">Website</a>
+          <a href="https://github.com/handyutils/dsopt" target="_blank" rel="noreferrer">Repo</a>
+          <a href="https://crates.io/crates/dsopt" target="_blank" rel="noreferrer">crates.io</a>
+        </footer>
+      </article>
+
+      <article class="tool t-violet">
+        <header class="tool-head">
+          <h3>sctxx</h3>
+          <span class="tag rust">Rust</span>
+        </header>
+        <p class="tool-desc">Session ConTeXt eXtractor: turns a coding-agent transcript (Claude Code,
+          Codex CLI, Pi) into a compact, verified, provenance-linked handoff any other agent can continue from.</p>
+        <div class="mini-code"><code>cargo install sctxx</code><button class="copy" data-copy="cargo install sctxx">copy</button></div>
+        <footer class="tool-links">
+          <a href="https://github.com/handyutils/sctxx" target="_blank" rel="noreferrer">Repo</a>
+          <a href="https://crates.io/crates/sctxx" target="_blank" rel="noreferrer">crates.io</a>
+        </footer>
+      </article>
+
+      <article class="tool t-cyan">
+        <header class="tool-head">
+          <h3>agentman</h3>
+          <span class="tag rust">Rust</span>
+        </header>
+        <p class="tool-desc">A colourful local TUI for managing coding-agent sessions across the agents
+          installed on your machine.</p>
+        <div class="mini-code"><code>cargo install agentman</code><button class="copy" data-copy="cargo install agentman">copy</button></div>
+        <footer class="tool-links">
+          <a href="https://github.com/handyutils/agentman" target="_blank" rel="noreferrer">Repo</a>
+          <a href="https://crates.io/crates/agentman" target="_blank" rel="noreferrer">crates.io</a>
+        </footer>
+      </article>
+
+      <article class="tool t-emerald">
+        <header class="tool-head">
+          <h3>cbmman</h3>
+          <span class="tag rust">Rust</span>
+        </header>
+        <p class="tool-desc">Interactive manager for codebase-memory-mcp: index, query, and monitor
+          codebase knowledge graphs from the terminal.</p>
+        <div class="mini-code"><code>cargo install cbmman</code><button class="copy" data-copy="cargo install cbmman">copy</button></div>
+        <footer class="tool-links">
+          <a href="https://github.com/handyutils/cbmman" target="_blank" rel="noreferrer">Repo</a>
+          <a href="https://crates.io/crates/cbmman" target="_blank" rel="noreferrer">crates.io</a>
+        </footer>
+      </article>
+
+      <article class="tool t-amber">
+        <header class="tool-head">
+          <h3>nvmman</h3>
+          <span class="tag rust">Rust</span>
+        </header>
+        <p class="tool-desc">Maintains nvm Node.js installations: installs and verifies the latest
+          platform LTS, migrates global npm packages, and keeps a consolidated registry so any version
+          can be restored.</p>
+        <div class="mini-code"><code>cargo install nvmman</code><button class="copy" data-copy="cargo install nvmman">copy</button></div>
+        <footer class="tool-links">
+          <a href="https://github.com/handyutils/nvmman" target="_blank" rel="noreferrer">Repo</a>
+          <a href="https://crates.io/crates/nvmman" target="_blank" rel="noreferrer">crates.io</a>
+        </footer>
+      </article>
+
+      <article class="tool t-rose">
+        <header class="tool-head">
+          <h3>mcpmanrs</h3>
+          <span class="tag rust">Rust</span>
+        </header>
+        <p class="tool-desc">A Rust TUI for managing MCP servers on macOS, Linux, and other Unix
+          systems — add, inspect, and toggle servers without hand-editing config files.</p>
+        <div class="mini-code"><code>cargo install mcpmanrs</code><button class="copy" data-copy="cargo install mcpmanrs">copy</button></div>
+        <footer class="tool-links">
+          <a href="https://github.com/handyutils/mcpmanrs" target="_blank" rel="noreferrer">Repo</a>
+          <a href="https://crates.io/crates/mcpmanrs" target="_blank" rel="noreferrer">crates.io</a>
+        </footer>
+      </article>
+
+      <article class="tool t-sky">
+        <header class="tool-head">
+          <h3>justtuit</h3>
+          <span class="tag npm">TypeScript</span>
+        </header>
+        <p class="tool-desc">Just TUI it! — a TUI for TUI tools. Browse 672 terminal applications
+          across 13 categories, and launch the one you need.</p>
+        <div class="mini-code"><code>npm i -g justtuit</code><button class="copy" data-copy="npm i -g justtuit">copy</button></div>
+        <footer class="tool-links">
+          <a href="https://github.com/handyutils/justtuit" target="_blank" rel="noreferrer">Repo</a>
+          <a href="https://www.npmjs.com/package/justtuit" target="_blank" rel="noreferrer">npm</a>
+        </footer>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="install" class="section">
+    <h2><span class="accent-rule"></span> Installing</h2>
+    <p class="section-lede">Rust tools come from crates.io; the TypeScript one comes from npm.</p>
+    <div class="codeblock">
+      <div class="codeblock-head"><span>shell</span><button class="copy" data-copy-target="all-code">copy</button></div>
+      <pre id="all-code"><code><span class="c"># Rust tools — installs a single static binary into ~/.cargo/bin</span>
+cargo install dsopt
+cargo install sctxx
+cargo install agentman
+cargo install cbmman
+cargo install nvmman
+cargo install mcpmanrs
+
+<span class="c"># TypeScript tool</span>
+npm i -g justtuit</code></pre>
+    </div>
+    <p class="note">
+      Need Rust first? Install it from <a href="https://rustup.rs" target="_blank" rel="noreferrer">rustup.rs</a>.
+      Every Rust tool here supports <code>--update</code> where built in, or
+      <code>cargo install &lt;name&gt; --force</code> to upgrade.
+    </p>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div>
+    <p class="footer-brand">HandyUtils</p>
+    <p class="footer-note">Focused terminal tools, published as small crates and packages. MIT licensed.</p>
+  </div>
+  <div class="footer-links">
+    <a href="https://github.com/handyutils" target="_blank" rel="noreferrer">GitHub</a>
+    <a href="https://crates.io/users/musichen" target="_blank" rel="noreferrer">crates.io</a>
+    <a href="https://github.com/handyutils/dsopt" target="_blank" rel="noreferrer">dsopt</a>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.copy').forEach(function (button) {
+    button.addEventListener('click', function () {
+      var target = button.getAttribute('data-copy-target');
+      var text = target
+        ? document.getElementById(target).innerText
+        : button.getAttribute('data-copy');
+      navigator.clipboard.writeText(text).then(function () {
+        var original = button.textContent;
+        button.textContent = 'copied ✓';
+        button.classList.add('done');
+        setTimeout(function () {
+          button.textContent = original;
+          button.classList.remove('done');
+        }, 1400);
+      });
+    });
+  });
+</script>
+</body>
+</html>
