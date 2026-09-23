@@ -12,9 +12,10 @@
   --muted: #98a3b2;
   --dim: #6b7684;
 
-  --accent: #6f9fe8;
-  --accent-soft: rgba(111, 159, 232, 0.12);
-  --accent-line: rgba(111, 159, 232, 0.32);
+  --accent: #cdf53a;
+  --accent-soft: rgba(205, 245, 58, 0.09);
+  --accent-line: rgba(205, 245, 58, 0.36);
+  --warm: #b45309;
 
   --radius: 12px;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
@@ -68,7 +69,7 @@ code {
 
 .brand { display: flex; align-items: center; gap: 0.6rem; color: var(--text); }
 .brand:hover { text-decoration: none; }
-.brand-mark { width: 26px; height: 26px; }
+.brand-mark { width: 30px; height: 30px; border-radius: 50%; flex: none; }
 .brand-name { font-weight: 600; letter-spacing: 0.01em; font-size: 1.02rem; color: #dfe5ee; }
 
 .topnav { display: flex; align-items: center; gap: clamp(0.7rem, 2vw, 1.5rem); }
@@ -113,8 +114,8 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 3rem) 4rem
 }
 
 .grad {
-  color: #b9cbe8;
-  background: linear-gradient(100deg, #cfd9e8, #8fb4e6);
+  color: #e9f5b4;
+  background: linear-gradient(100deg, #f0f5d8, #cdf53a);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -132,7 +133,12 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 3rem) 4rem
   background: var(--panel);
   color: var(--muted);
 }
-.badge.blue, .badge.cyan, .badge.violet, .badge.emerald { color: #a9bdd8; border-color: #2a3441; }
+.badge.blue {
+  color: #dff58f;
+  border-color: rgba(205, 245, 58, 0.38);
+  background: rgba(205, 245, 58, 0.07);
+}
+.badge.cyan, .badge.violet, .badge.emerald { color: var(--muted); border-color: var(--line); }
 
 /* ------------------------------------------------------------------ strip */
 
@@ -244,7 +250,7 @@ main { max-width: 1080px; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 3rem) 4rem
 .tool-links { display: flex; flex-wrap: wrap; gap: 0.9rem; font-size: 0.83rem; }
 .tool-links a { color: var(--muted); }
 .tool-links a:hover { color: var(--accent); }
-.tool-links .primary { color: #b6c9e4; font-weight: 500; }
+.tool-links .primary { color: #d9ef9c; font-weight: 500; }
 
 /* muted per-tool tints — calm, low saturation, never louder than the content */
 .t-blue { --tool-accent: #6f9fe8; }
